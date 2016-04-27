@@ -1,8 +1,4 @@
 
-# coding: utf-8
-
-# In[5]:
-
 # ------ This is Deep learning team tutorial example1: MNIST and softmax regression -----
 
 # Download MNIST data from server using input_data.py
