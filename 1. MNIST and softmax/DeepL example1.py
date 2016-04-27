@@ -45,7 +45,4 @@ print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}
 # Reference: https://www.tensorflow.org/versions/r0.8/tutorials/mnist/beginners/index.html
 
 
-# In[ ]:
-
-
 
