@@ -8,22 +8,26 @@
 # Step 1 - MNIST dataset
 # Use input_data.py to download MNIST dataset(you should have input_data.py in folder)
 from tensorflow.examples.tutorials.mnist import input_data
+import tensorflow as tf
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+x = tf.placeholder("float", shape = [None, 784])
+y_ = tf.placeholder("float", shape = [None, 10])
 
 # Step 2 - Start tensorflow session
 # Define sess using interactiveSession() class
-import tensorflow as tf
 sess = tf.InteractiveSession()
+
 
 # Step 3 - Define weight and bias initiation functions
 #
 def weight_variable(shape):
-    initial = tf.truncated_normal(shape, stddev=0.1)
-    return tf.Variable(initial)
+  initial = tf.truncated_normal(shape, stddev=0.1)
+  return tf.Variable(initial)
 
 def bias_variable(shape):
-    initial = tf.constant(0.1, shape=shape)
-    return tf.Variable(initial)
+  initial = tf.constant(0.1, shape=shape)
+  return tf.Variable(initial)
+
 
 # step 4 - Define convolution and pooling functions
 #
@@ -31,9 +35,10 @@ def conv2d(x, W):
     return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
 
 def max_pool_2x2(x):
-    return tf.nn.max_pool(x, ksize=[1, 2, 2, 1],strides=[1, 2, 2, 1],padding='SAME')
+    return tf.nn.max_pool(x, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
 
-# step 5 - First convolutional layer
+
+# step 5 - First convolution layer
 #
 W_conv1 = weight_variable([5, 5, 1, 32])
 b_conv1 = bias_variable([32])
@@ -84,8 +89,6 @@ for i in range(20000):
 
 print("test accuracy %g"%accuracy.eval(feed_dict={
     x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
-
-
 
 
 
