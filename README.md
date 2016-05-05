@@ -11,15 +11,15 @@ Step2: $python DeepL_example1.py
 
 2. MNIST and Convolutional neural network
 ----------------------------------
-Object: Use tensorflow to build the first convolutional neural network and analysis MNIST dataset
+Object: Use tensorflow to build the first convolutional neural network and analysis MNIST dataset  
 
-step1: MNIST dataset
-step2: Start tensorflow session
-step3: Define weight and bias initiation functions
-step4: Define convolution and pooling functions
-step5: First convolution layer
-step6: Second convolutional layer
-step7: Densely connected layer
-step8: Dropout layer
-step9: Readout layer
-Step10: training the CNN and evaluation
+step1: MNIST dataset  
+step2: Start tensorflow session  
+step3: Define weight and bias initiation functions  
+step4: Define convolution and pooling functions  
+step5: First convolution layer  
+step6: Second convolutional layer  
+step7: Densely connected layer  
+step8: Dropout layer  
+step9: Readout layer  
+Step10: training the CNN and evaluation  
